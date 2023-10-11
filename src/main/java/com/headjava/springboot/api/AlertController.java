@@ -21,7 +21,7 @@ public class AlertController {
         this.alertService = alertService;
     }
 
-    //Save the alert to db
+    //Save the alerts to db
     @RequestMapping(value = "/alerts", method = RequestMethod.POST)
     public ResponseEntity<AlertResponse> saveAlerts(@RequestBody Alert alert) {
         try {
