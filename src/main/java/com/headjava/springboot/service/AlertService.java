@@ -26,13 +26,14 @@ public class AlertService {
     public String getServiceNameByServiceId(String serviceId){
 
         Optional<Alert> alertOptional = alertRepository.findById(serviceId);
-        System.out.println(alertOptional);
+
         if(alertOptional.isPresent()){
             Alert alert = alertOptional.get();
             return alert.getService_name();
         } else {
             return null;
         }
+
     }
 
     public List<Alert> getAlertsByServiceIdAndTimeStamp(String serviceId, long startTS, long endTS){
@@ -44,7 +45,7 @@ public class AlertService {
         for(Alert alert: alerts){
 
             long alertTimeStamp = Long.parseLong(alert.getAlert_ts());
-            //
+
             if(alertTimeStamp >= startTS && alertTimeStamp <= endTS){
                 results.add(alert);
             }

@@ -4,6 +4,7 @@ import com.headjava.springboot.dao.Alert;
 
 import java.util.List;
 
+//Specific AlertResponse for the get request
 public class AlertResponse_ {
     private String service_id;
     private String service_name;

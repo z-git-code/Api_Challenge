@@ -1,5 +1,6 @@
 package com.headjava.springboot.api.support;
 
+//Specific AlertResponse for the get request
 public class AlertResponse {
 
     private String alert_id;

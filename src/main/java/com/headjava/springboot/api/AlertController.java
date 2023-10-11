@@ -21,6 +21,7 @@ public class AlertController {
         this.alertService = alertService;
     }
 
+    //Save the alert to db
     @RequestMapping(value = "/alerts", method = RequestMethod.POST)
     public ResponseEntity<AlertResponse> saveAlerts(@RequestBody Alert alert) {
         try {
@@ -34,6 +35,7 @@ public class AlertController {
         }
     }
 
+    //fetch the alerts from db
     @RequestMapping(value = "/alerts", method = RequestMethod.GET)
     public ResponseEntity<AlertResponse_> getAlerts(@RequestParam(name = "service_id") String serviceId,
                                                     @RequestParam(name = "start_ts") long startTimeStamp,
